@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script
+      src="https://kit.fontawesome.com/bcba7a1dbf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ChallNote</title>
+  </head>
+  <body>
+    <div id="logo">CHALLNOTE</div>
+    <div id="main_screen">
+      <!-- 노트 리스트(왼쪽 열) -->
+      <section id="note_list">
+        <div class="note_list_box">
+          <div class="note_list_division">
+            <button class="note_list_button">
+              <div class="list_open">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <div class="list_close hidden">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <b>예정</b>
+          </div>
+          <ul id="before_note_list" class="hidden"></ul>
+        </div>
+
+        <div class="note_list_box">
+          <div class="note_list_division">
+            <button class="note_list_button">
+              <div class="list_open">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <div class="list_close hidden">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <b>진행중</b>
+          </div>
+          <ul id="ongoing_note_list" class="hidden"></ul>
+        </div>
+
+        <div class="note_list_box">
+          <div class="note_list_division">
+            <button class="note_list_button">
+              <div class="list_open">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <div class="list_close hidden">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <b>종료</b>
+          </div>
+          <ul id="after_note_list" class="hidden"></ul>
+        </div>
+        <!-- 여닫이 버튼 -->
+        <div id="note_list_casement">
+          <div class="open hidden">
+            <i class="fa-solid fa-angles-right"></i>
+          </div>
+          <div class="close">
+            <i class="fa-solid fa-angles-left"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- 선택된 노트 화면(가운데 열) -->
+      <section id="note_view">
+        <div>
+          <h3 id="now_date">0000-00-00</h3>
+          <h3 id="now_time">00:00:00</h3>
+        </div>
+        <div id="seleted_note_title">선택된 노트 제목</div>
+        <div id="text_list_container">
+          <div class="text_box">글</div>
+        </div>
+
+        <form id="new_text_form">
+          <input id="text_input_box" required type="text" />
+          <button><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </section>
+
+      <!-- 선택된 노트 타임라인(오른쪽 열) -->
+      <section id="note_timeline">
+        <div id="timeline_title">TIMELINE</div>
+        <div id="timeline_container">
+          <div class="center_line">중심선</div>
+          <div id="timelint_today">오늘</div>
+        </div>
+        <div>dd</div>
+        <div id="timeline_casement">
+          <div class="close">
+            <i class="fa-solid fa-angles-right"></i>
+          </div>
+          <div class="open hidden">
+            <i class="fa-solid fa-angles-left"></i>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="JS/date.js"></script>
+  </body>
+</html>

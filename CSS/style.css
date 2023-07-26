@@ -1,0 +1,165 @@
+@import "reset.css";
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#logo {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 20px;
+  margin: 10px;
+  font-weight: 800;
+  font-size: 32px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#main_screen {
+  display: flex;
+  column-count: 3;
+  height: 100vh;
+}
+
+/* 노트 리스트(왼쪽 열) */
+#note_list {
+  position: relative;
+  padding-top: 80px;
+  background-color: rgb(164, 164, 216);
+  min-width: 300px;
+  border-right: 5px solid black;
+}
+
+.note_list_box {
+  padding: 10px;
+  margin: 0px 15px;
+}
+
+.note_list_division {
+  display: flex;
+  justify-content: start;
+  color: rgb(40, 40, 40);
+  font-weight: 700;
+}
+
+.note_list_division .note_list_button {
+  border: none;
+  background-color: inherit;
+}
+
+#note_list #note_list_casement {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  z-index: 9;
+  background-color: cadetblue;
+  border-radius: 40%;
+  padding: 10px;
+}
+
+/* 선택된 노트 화면(가운데 열) */
+#note_view {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: darkgrey;
+  height: 100%;
+}
+
+#seleted_note_title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#text_list_container {
+  flex: 1;
+  background-color: aliceblue;
+}
+
+#new_text_form {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 10px;
+  margin: 20px 20px;
+  z-index: 8;
+}
+#new_text_form input {
+  flex: 1;
+  border: none;
+  font-size: 20px;
+}
+#new_text_form button {
+  border: none;
+  background-color: inherit;
+  padding: 10px;
+}
+
+/* 선택된 노트 타임라인(오른쪽 열) */
+#note_timeline {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: rgb(139, 173, 139);
+  min-width: 300px;
+  border-left: 5px solid black;
+  padding: 10px 0px;
+}
+
+#timeline_title {
+  font-size: 24px;
+  padding: 10px;
+}
+
+#timeline_container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  padding: 0 20px;
+}
+
+.center_line {
+  flex: 1;
+  text-align: center;
+}
+
+.center_line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 1px;
+  background-color: #000;
+}
+
+#timelint_today {
+  position: absolute;
+  top: 50%;
+}
+
+#timeline_casement {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  z-index: 9;
+  background-color: cadetblue;
+  border-radius: 40%;
+  padding: 10px;
+}
+
+/* 본문 글 박스 */
+
+.text_box {
+  background-color: gainsboro;
+  padding: 15px;
+  margin: 10px 80px;
+  border-radius: 10px;
+}
