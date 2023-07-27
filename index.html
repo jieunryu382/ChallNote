@@ -11,60 +11,67 @@
     <title>ChallNote</title>
   </head>
   <body>
-    <div id="logo">CHALLNOTE</div>
     <div id="main_screen">
       <!-- 노트 리스트(왼쪽 열) -->
-      <section id="note_list">
-        <div class="note_list_box">
-          <div class="note_list_division">
-            <button class="note_list_button">
-              <div class="list_open">
-                <i class="fa-solid fa-angle-right"></i>
-              </div>
-              <div class="list_close hidden">
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
-            </button>
-            <b>예정</b>
+      <section id="note_list" class="section_width">
+        <div class="section_contents">
+          <div id="logo">CHALLNOTE</div>
+          <div class="note_list_box">
+            <div class="note_list_division">
+              <button class="note_list_button">
+                <div class="list_open_button">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="list_close_button hidden">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </button>
+              <b>예정</b>
+            </div>
+            <ul id="before_note_list" class="division_note_list hidden">
+              <div>note</div>
+            </ul>
           </div>
-          <ul id="before_note_list" class="hidden"></ul>
+
+          <div class="note_list_box">
+            <div class="note_list_division">
+              <button class="note_list_button">
+                <div class="list_open_button">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="list_close_button hidden">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </button>
+              <b>진행중</b>
+            </div>
+            <ul id="ongoing_note_list" class="division_note_list hidden">
+              <div>dd</div>
+            </ul>
+          </div>
+
+          <div class="note_list_box">
+            <div class="note_list_division">
+              <button class="note_list_button">
+                <div class="list_open_button">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+                <div class="list_close_button hidden">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+              </button>
+              <b>종료</b>
+            </div>
+            <ul id="after_note_list" class="division_note_list hidden"></ul>
+          </div>
         </div>
 
-        <div class="note_list_box">
-          <div class="note_list_division">
-            <button class="note_list_button">
-              <div class="list_open">
-                <i class="fa-solid fa-angle-right"></i>
-              </div>
-              <div class="list_close hidden">
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
-            </button>
-            <b>진행중</b>
-          </div>
-          <ul id="ongoing_note_list" class="hidden"></ul>
-        </div>
-
-        <div class="note_list_box">
-          <div class="note_list_division">
-            <button class="note_list_button">
-              <div class="list_open">
-                <i class="fa-solid fa-angle-right"></i>
-              </div>
-              <div class="list_close hidden">
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
-            </button>
-            <b>종료</b>
-          </div>
-          <ul id="after_note_list" class="hidden"></ul>
-        </div>
         <!-- 여닫이 버튼 -->
-        <div id="note_list_casement">
-          <div class="open hidden">
+        <div id="note_list_casement" class="section_casement">
+          <div class="section_open hidden">
             <i class="fa-solid fa-angles-right"></i>
           </div>
-          <div class="close">
+          <div class="section_close">
             <i class="fa-solid fa-angles-left"></i>
           </div>
         </div>
@@ -88,23 +95,26 @@
       </section>
 
       <!-- 선택된 노트 타임라인(오른쪽 열) -->
-      <section id="note_timeline">
-        <div id="timeline_title">TIMELINE</div>
-        <div id="timeline_container">
-          <div class="center_line">중심선</div>
-          <div id="timelint_today">오늘</div>
+      <section id="note_timeline" class="section_width">
+        <div id="timeline_container" class="section_contents">
+          <div id="timeline_title">TIMELINE</div>
+          <div>
+            <div class="center_line"></div>
+            <div id="timeline_today">오늘</div>
+          </div>
         </div>
-        <div>dd</div>
-        <div id="timeline_casement">
-          <div class="close">
+        <div id="timeline_casement" class="section_casement">
+          <div class="section_close">
             <i class="fa-solid fa-angles-right"></i>
           </div>
-          <div class="open hidden">
+          <div class="section_open hidden">
             <i class="fa-solid fa-angles-left"></i>
           </div>
         </div>
       </section>
     </div>
     <script src="JS/date.js"></script>
+    <script src="js/list_toggle.js"></script>
+    <script src="js/section_toggle.js"></script>
   </body>
 </html>

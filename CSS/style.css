@@ -10,15 +10,8 @@ body {
   display: none;
 }
 
-#logo {
-  position: absolute;
-  z-index: 10;
-  top: 10px;
-  left: 20px;
-  margin: 10px;
-  font-weight: 800;
-  font-size: 32px;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+.section_width {
+  min-width: 300px;
 }
 
 #main_screen {
@@ -32,8 +25,18 @@ body {
   position: relative;
   padding-top: 80px;
   background-color: rgb(164, 164, 216);
-  min-width: 300px;
   border-right: 5px solid black;
+}
+
+#logo {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 20px;
+  margin: 10px;
+  font-weight: 800;
+  font-size: 32px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .note_list_box {
@@ -48,19 +51,23 @@ body {
   font-weight: 700;
 }
 
-.note_list_division .note_list_button {
+.note_list_button {
   border: none;
   background-color: inherit;
+  width: 30px;
+}
+
+.division_note_list {
+  padding: 5px 0px;
 }
 
 #note_list #note_list_casement {
   position: absolute;
-  right: -20px;
-  top: 50%;
+  right: 0px;
+  top: 0%;
   z-index: 9;
-  background-color: cadetblue;
-  border-radius: 40%;
-  padding: 10px;
+  padding: 20px;
+  font-size: 26px;
 }
 
 /* 선택된 노트 화면(가운데 열) */
@@ -108,7 +115,6 @@ body {
   position: relative;
   flex-direction: column;
   background-color: rgb(139, 173, 139);
-  min-width: 300px;
   border-left: 5px solid black;
   padding: 10px 0px;
 }
@@ -120,14 +126,8 @@ body {
 
 #timeline_container {
   position: relative;
-  display: flex;
   flex: 1;
   padding: 0 20px;
-}
-
-.center_line {
-  flex: 1;
-  text-align: center;
 }
 
 .center_line::after {
@@ -135,24 +135,23 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  height: 100%;
+  height: calc(100% - 44px);
   width: 1px;
   background-color: #000;
 }
 
-#timelint_today {
+#timeline_today {
   position: absolute;
   top: 50%;
 }
 
 #timeline_casement {
   position: absolute;
-  left: -20px;
-  top: 50%;
+  left: 0px;
+  top: 0%;
   z-index: 9;
-  background-color: cadetblue;
-  border-radius: 40%;
-  padding: 10px;
+  padding: 20px;
+  font-size: 26px;
 }
 
 /* 본문 글 박스 */
