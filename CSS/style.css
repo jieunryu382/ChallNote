@@ -24,7 +24,7 @@ body {
 #note_list {
   position: relative;
   padding-top: 80px;
-  background-color: rgb(164, 164, 216);
+  background-color: rgb(164, 164, 200);
   border-right: 5px solid black;
 }
 
@@ -59,6 +59,21 @@ body {
 
 .division_note_list {
   padding: 5px 0px;
+}
+
+#new_note {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px;
+}
+
+#new_note_button {
+  background-color: inherit;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
+  padding: 10px;
+  font-size: 16px;
 }
 
 #note_list #note_list_casement {
@@ -161,4 +176,23 @@ body {
   padding: 15px;
   margin: 10px 80px;
   border-radius: 10px;
+}
+
+/* 토글 애니메이션 */
+@keyframes closeSection {
+  from {
+    min-width: 300px;
+  }
+  to {
+    min-width: 70px;
+  }
+}
+
+@keyframes openSection {
+  from {
+    min-width: 70px;
+  }
+  to {
+    min-width: 300px;
+  }
 }
