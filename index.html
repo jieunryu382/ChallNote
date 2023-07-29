@@ -118,8 +118,33 @@
         </div>
       </section>
     </div>
+
+    <div id="popup_container" class="hidden">
+      <form id="new_note_popup">
+        <label for="title">제목</label>
+        <input type="text" id="title" placeholder="" />
+
+        <label for="new_note_description">노트 설명</label>
+        <input type="text" id="new_note_description" placeholder="" />
+
+        <label for="subject">기간</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+
+        <div>
+          <input type="submit" id="popup_submit" value="확인" />
+          <input type="submit" id="popup_cancle" value="취소" />
+        </div>
+      </form>
+    </div>
+
     <script src="JS/date.js"></script>
     <script src="js/list_toggle.js"></script>
     <script src="js/section_toggle.js"></script>
+    <script src="js/new_note_popup.js"></script>
   </body>
 </html>
