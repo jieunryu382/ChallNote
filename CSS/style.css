@@ -30,7 +30,7 @@ body {
 
 #logo {
   position: absolute;
-  z-index: 10;
+  z-index: 5;
   top: 10px;
   left: 20px;
   margin: 10px;
@@ -111,7 +111,7 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   padding: 10px 10px;
   margin: 20px 20px;
-  z-index: 8;
+  z-index: 5;
 }
 #new_text_form input {
   flex: 1;
@@ -164,7 +164,7 @@ body {
   position: absolute;
   left: 0px;
   top: 0%;
-  z-index: 9;
+  z-index: 5;
   padding: 20px;
   font-size: 26px;
 }
@@ -198,26 +198,43 @@ body {
 }
 
 /* 노트 생성 */
-#new_note_popup input[type="text"] {
+#new_note_popup label {
+  padding: 10px 0 5px 0;
+}
+
+#new_note_popup input[type="text"],
+textarea {
   width: 450px;
-  padding: 12px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
   margin: 10px 0px;
 }
 
+#new_note_popup input[type="date"],
+input[type="number"] {
+  width: 130px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 10px 10px;
+  text-align: center;
+}
+
 #new_note_popup input[type="submit"] {
-  background-color: #04aa6d;
+  background-color: rgb(10, 170, 200);
   color: white;
   padding: 10px 15px;
+  margin: 20px 5px 0px 5px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 #new_note_popup input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: rgb(10, 150, 180);
 }
 
 #new_note_popup {
@@ -228,6 +245,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 500px;
   border-radius: 5px;
   background-color: skyblue;
@@ -241,5 +259,5 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 6;
 }

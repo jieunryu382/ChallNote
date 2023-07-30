@@ -119,21 +119,26 @@
       </section>
     </div>
 
+    <!-- 노트 생성 팝업 -->
     <div id="popup_container" class="hidden">
       <form id="new_note_popup">
-        <label for="title">제목</label>
-        <input type="text" id="title" placeholder="" />
+        <label for="input_title">제목</label>
+        <input type="text" id="input_title" placeholder="노트 제목" />
 
-        <label for="new_note_description">노트 설명</label>
-        <input type="text" id="new_note_description" placeholder="" />
-
-        <label for="subject">기간</label>
+        <label for="input_description">노트 설명</label>
         <textarea
-          id="subject"
-          name="subject"
-          placeholder="Write something.."
-          style="height: 200px"
+          id="input_description"
+          placeholder="노트 설명"
+          style="height: 80px"
         ></textarea>
+
+        <label for="input_period">기간</label>
+        <div>
+          <input type="date" id="input_start" />
+          -
+          <input type="date" id="input_end" />
+        </div>
+        <div id="input_period">3일동안</div>
 
         <div>
           <input type="submit" id="popup_submit" value="확인" />
@@ -146,5 +151,6 @@
     <script src="js/list_toggle.js"></script>
     <script src="js/section_toggle.js"></script>
     <script src="js/new_note_popup.js"></script>
+    <script src="js/popup_input.js"></script>
   </body>
 </html>
