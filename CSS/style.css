@@ -223,7 +223,7 @@ input[type="number"] {
   text-align: center;
 }
 
-#new_note_popup input[type="submit"] {
+#new_note_popup button {
   background-color: rgb(10, 170, 200);
   color: white;
   padding: 10px 15px;
@@ -233,7 +233,7 @@ input[type="number"] {
   cursor: pointer;
 }
 
-#new_note_popup input[type="submit"]:hover {
+#new_note_popup button:hover {
   background-color: rgb(10, 150, 180);
 }
 
