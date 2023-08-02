@@ -1,156 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <script
-      src="https://kit.fontawesome.com/bcba7a1dbf.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>ChallNote</title>
-  </head>
-  <body>
-    <div id="main_screen">
-      <!-- 노트 리스트(왼쪽 열) -->
-      <section id="note_list" class="section_width">
-        <div class="section_contents">
-          <div id="logo">CHALLNOTE</div>
-          <div class="note_list_box">
-            <div class="note_list_division">
-              <button class="note_list_button">
-                <div class="list_open_button">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <div class="list_close_button hidden">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-              </button>
-              <b>예정</b>
-            </div>
-            <ul id="before_note_list" class="division_note_list hidden">
-              <div>note</div>
-            </ul>
-          </div>
 
-          <div class="note_list_box">
-            <div class="note_list_division">
-              <button class="note_list_button">
-                <div class="list_open_button">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <div class="list_close_button hidden">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-              </button>
-              <b>진행중</b>
-            </div>
-            <ul id="ongoing_note_list" class="division_note_list hidden">
-              <div>dd</div>
-            </ul>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <script src="https://kit.fontawesome.com/bcba7a1dbf.js" crossorigin="anonymous"></script>
+  <title>ChallNote</title>
+</head>
 
-          <div class="note_list_box">
-            <div class="note_list_division">
-              <button class="note_list_button">
-                <div class="list_open_button">
-                  <i class="fa-solid fa-angle-right"></i>
-                </div>
-                <div class="list_close_button hidden">
-                  <i class="fa-solid fa-chevron-down"></i>
-                </div>
-              </button>
-              <b>종료</b>
-            </div>
-            <ul id="after_note_list" class="division_note_list hidden"></ul>
-          </div>
+<body>
+  <div id="main_screen">
+    <!-- 노트 리스트(왼쪽 열) -->
+    <section id="note_list" class="section_width">
+      <div class="section_contents">
+        <div id="logo">CHALLNOTE</div>
 
+        <div class="note_list_box">
+          <div class="note_list_division">
+            <button class="note_list_button">
+              <div class="list_open_button">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <div class="list_close_button hidden">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <b>예정</b>
+          </div>
+          <ul id="before_note_list" class="division_note_list hidden">
+            <div>note</div>
+          </ul>
+        </div>
+
+        <div class="note_list_box">
+          <div class="note_list_division">
+            <button class="note_list_button">
+              <div class="list_open_button">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <div class="list_close_button hidden">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <b>진행중</b>
+          </div>
+          <ul id="ongoing_note_list" class="division_note_list hidden">
+            <div>dd</div>
+          </ul>
+        </div>
+
+        <div class="note_list_box">
+          <div class="note_list_division">
+            <button class="note_list_button">
+              <div class="list_open_button">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <div class="list_close_button hidden">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </button>
+            <b>종료</b>
+          </div>
+          <ul id="after_note_list" class="division_note_list hidden"></ul>
+        </div>
+        <div id="new_note_box">
+          <hr />
           <div id="new_note">
-            <button id="new_note_button">새 노트</button>
+            <i class="fa-solid fa-plus"></i>
+            <b>새 노트</b>
           </div>
         </div>
 
-        <!-- 여닫이 버튼 -->
-        <div id="note_list_casement" class="section_casement">
-          <div class="section_open hidden">
-            <i class="fa-solid fa-angles-right"></i>
-          </div>
-          <div class="section_close">
-            <i class="fa-solid fa-angles-left"></i>
-          </div>
-        </div>
-      </section>
+      </div>
 
-      <!-- 선택된 노트 화면(가운데 열) -->
-      <section id="note_view">
-        <div>
-          <h3 id="now_date">0000-00-00</h3>
-          <h3 id="now_time">00:00:00</h3>
+      <!-- 여닫이 버튼 -->
+      <div id="note_list_casement" class="section_casement">
+        <div class="section_open hidden">
+          <i class="fa-solid fa-angles-right"></i>
         </div>
+        <div class="section_close">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+      </div>
+    </section>
 
+    <!-- 선택된 노트 화면(가운데 열) -->
+    <section id="note_view">
+      <div>
+        <h3 id="now_date">0000-00-00</h3>
+        <h3 id="now_time">00:00:00</h3>
         <div id="seleted_note_title">선택된 노트 제목</div>
-        <div id="text_list_container">
-          <div class="text_box">글</div>
-        </div>
+      </div>
 
-        <form id="new_text_form">
-          <input id="text_input_box" required type="text" />
-          <button><i class="fa-solid fa-paper-plane"></i></button>
-        </form>
-      </section>
+      <div id="text_list_container">
 
-      <!-- 선택된 노트 타임라인(오른쪽 열) -->
-      <section id="note_timeline" class="section_width">
-        <div id="timeline_container" class="section_contents">
-          <div id="timeline_title">TIMELINE</div>
-          <div>
-            <div class="center_line"></div>
-            <div id="timeline_today">오늘</div>
+        <div class="text_box">
+          <div class="text_menu_box">
+            <i class="fa-solid fa-bars"></i>
           </div>
-        </div>
-        <div id="timeline_casement" class="section_casement">
-          <div class="section_close">
-            <i class="fa-solid fa-angles-right"></i>
+          <div class="hidden text_menu_toggle">
+            <div class="text_menu_list">
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash"></i>
+            </div>
           </div>
-          <div class="section_open hidden">
-            <i class="fa-solid fa-angles-left"></i>
+          <div class="text_time">2023년 01월 01일 00시 00분</div>
+          <div class="text_contents">푸르른 초목들이 맑은 하늘 아래 희고 기운찬 모습으로 자라고 있습니다. 새들의 환한 노래가 귀를 채우며, 바람이 부드럽게 속삭여 차분한 여유를
+            선사합니다. 그림자가 부드럽게 춤을 추며, 햇살은 감미로운 미소로 대지를 밝힙니다. 자연의 속삭임이 마음에 평온함을 전달하고, 꽃들은 다채롭게 피어있어 아름다운 향기가 머무르는 곳입니다. 순간의
+            아름다움에 심장이 설레고, 시간이 느릿해져 삶의 간소함을 깨닫게 합니다. 이곳은 마치 영원히 변하지 않을 것 같은 곳이며, 한결같이 아름다움이 이어질 것만 같은 자연의 품안입니다.</div>
+        </div>
+        <div class="text_box">
+          <div class="text_menu_box">
+            <i class="fa-solid fa-bars"></i>
           </div>
+          <div class="hidden text_menu_toggle">
+            <div class="text_menu_list">
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </div>
+          <div class="text_time">2023년 01월 01일 00시 00분</div>
+          <div class="text_contents">푸르른 초목들이 맑은 하늘 아래 희고 기운찬 모습으로 자라고 있습니다. 새들의 환한 노래가 귀를 채우며, 바람이 부드럽게 속삭여 차분한 여유를
+            선사합니다. 그림자가 부드럽게 춤을 추며, 햇살은 감미로운 미소로 대지를 밝힙니다. 자연의 속삭임이 마음에 평온함을 전달하고, 꽃들은 다채롭게 피어있어 아름다운 향기가 머무르는 곳입니다. 순간의
+            아름다움에 심장이 설레고, 시간이 느릿해져 삶의 간소함을 깨닫게 합니다. 이곳은 마치 영원히 변하지 않을 것 같은 곳이며, 한결같이 아름다움이 이어질 것만 같은 자연의 품안입니다.</div>
         </div>
-      </section>
-    </div>
 
-    <!-- 노트 생성 팝업 -->
-    <div id="popup_container" class="hidden">
-      <form id="new_note_popup">
-        <label for="input_title">제목</label>
-        <input type="text" id="input_title" placeholder="노트 제목" />
+      </div>
 
-        <label for="input_description">노트 설명</label>
-        <textarea
-          id="input_description"
-          placeholder="노트 설명"
-          style="height: 80px"
-        ></textarea>
-
-        <label for="input_period">기간</label>
-        <div>
-          <input type="date" id="input_start" />
-          -
-          <input type="date" id="input_end" />
-        </div>
-        <div id="input_period">3일동안</div>
-
-        <div>
-          <button type="submit" id="popup_submit">확인</button>
-          <button id="popup_cancle">취소</button>
-        </div>
+      <form id="new_text_form">
+        <input id="text_input_box" required type="text" />
+        <button><i class="fa-solid fa-paper-plane"></i></button>
       </form>
-    </div>
+    </section>
 
-    <script src="JS/date.js"></script>
-    <script src="js/list_toggle.js"></script>
-    <script src="js/section_toggle.js"></script>
-    <script src="js/new_note_popup.js"></script>
-    <script src="js/popup_input.js"></script>
-  </body>
+    <!-- 선택된 노트 타임라인(오른쪽 열) -->
+    <section id="note_timeline" class="section_width">
+      <div id="timeline_container" class="section_contents">
+        <div id="timeline_title">TIMELINE</div>
+        <div>
+          <div class="center_line"></div>
+          <div id="timeline_today">오늘</div>
+        </div>
+      </div>
+      <div id="timeline_casement" class="section_casement">
+        <div class="section_close">
+          <i class="fa-solid fa-angles-right"></i>
+        </div>
+        <div class="section_open hidden">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 노트 생성 팝업 -->
+  <div id="popup_container" class="hidden">
+    <form id="new_note_popup">
+      <label for="input_title">제목</label>
+      <input type="text" id="input_title" placeholder="노트 제목" />
+
+      <label for="input_description">노트 설명</label>
+      <textarea id="input_description" placeholder="노트 설명" style="height: 80px"></textarea>
+
+      <label for="input_period">기간</label>
+      <div>
+        <input type="date" id="input_start" />
+        -
+        <input type="date" id="input_end" />
+      </div>
+      <div id="input_period">3일동안</div>
+
+      <div>
+        <button type="submit" id="popup_submit">확인</button>
+        <button type='button' id="popup_cancle">취소</button>
+      </div>
+
+    </form>
+  </div>
+  <script src="JS/date.js"></script>
+  <script src="js/list_toggle.js"></script>
+  <script src="js/section_toggle.js"></script>
+  <script src="js/new_note_popup.js"></script>
+  <script src="js/popup_input.js"></script>
+</body>
+
 </html>

@@ -1,4 +1,4 @@
-const newButton = document.querySelector("#new_note_button");
+const newButton = document.querySelector("#new_note");
 const popupContainer = document.querySelector("#popup_container");
 const newForm = document.querySelector("#new_note_popup");
 const cancle = document.querySelector("#popup_cancle");
@@ -28,6 +28,7 @@ class useOutsideClick {
 newButton.addEventListener("click", () => {
   popupContainer.classList.remove("hidden");
 });
+
 cancle.addEventListener("click", () => {
   popupContainer.classList.add("hidden");
 });
