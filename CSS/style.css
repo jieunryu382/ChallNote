@@ -24,7 +24,7 @@ body {
 #note_list {
   position: relative;
   padding-top: 80px;
-  background-color: rgb(164, 164, 200);
+  background-color: rgb(244, 242, 222);
   border-right: 5px solid black;
 }
 
@@ -71,14 +71,14 @@ body {
 }
 
 #new_note_box hr {
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 3px;
   border: none;
   margin: 0;
 }
 
 #new_note_box:hover {
-  background-color: rgb(150, 150, 190);
+  background-color: rgb(232, 232, 215);
 }
 
 #new_note {
@@ -108,18 +108,38 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: darkgrey;
+  background-color: rgb(161, 204, 209);
   height: 100%;
+  align-items: center;
 }
 
 #seleted_note_title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
+  margin: 8px;
+}
+
+#note_view hr {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 3px;
+  border: none;
+  margin: 0;
 }
 
 #text_list_container {
   flex: 1;
-  background-color: aliceblue;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+#text_list_container::-webkit-scrollbar {
+  width: 15px;
+}
+#text_list_container::-webkit-scrollbar-thumb {
+  background-color: rgba(240, 248, 255, 0.6);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 3px solid transparent;
 }
 
 #new_text_form {
@@ -127,19 +147,21 @@ body {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  padding: 10px 10px;
-  margin: 20px 20px;
-  z-index: 5;
+  padding: 10px;
+  margin: 10px 20px 15px 20px;
+  width: 90%;
+  max-width: 850px;
+  z-index: 4;
 }
 #new_text_form input {
   flex: 1;
   border: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 #new_text_form button {
   border: none;
   background-color: inherit;
-  padding: 10px;
+  padding: 6px;
   cursor: pointer;
 }
 
@@ -148,7 +170,8 @@ body {
 .text_box {
   position: relative;
   text-align: left;
-  background-color: gainsboro;
+  background-color: aliceblue;
+  max-width: 800px;
   padding: 15px 20px;
   margin: 10px 80px;
   border-radius: 10px;
@@ -165,7 +188,7 @@ body {
 }
 
 .text_menu_box:hover {
-  background-color: rgb(186, 186, 186);
+  background-color: rgb(161, 204, 209);
 }
 
 .text_menu_list {
@@ -181,7 +204,7 @@ body {
   border-radius: 10px;
 }
 .text_menu_list i:hover {
-  background-color: rgb(186, 186, 186);
+  background-color: rgb(161, 204, 209);
 }
 
 .text_time {
@@ -190,9 +213,8 @@ body {
 }
 
 .text_contents {
-  font-size: 18px;
-  margin: 0 20px 0 10px;
-  line-height: 1.3;
+  margin: 5px 20px 0 10px;
+  line-height: 1.5;
 }
 
 /* 선택된 노트 타임라인(오른쪽 열) */
@@ -200,7 +222,7 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-  background-color: rgb(139, 173, 139);
+  background-color: rgb(244, 242, 222);
   border-left: 5px solid black;
   padding: 10px 0px;
 }
@@ -222,7 +244,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   height: calc(100% - 44px);
-  width: 1px;
+  width: 2px;
   background-color: #000;
 }
 
@@ -261,6 +283,31 @@ body {
 }
 
 /* 노트 생성 */
+#popup_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 6;
+}
+
+#new_note_popup {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  border-radius: 5px;
+  background-color: rgb(244, 242, 222);
+  padding: 20px;
+}
+
 #new_note_popup label {
   padding: 10px 0 5px 0;
 }
@@ -287,7 +334,7 @@ input[type="number"] {
 }
 
 #new_note_popup button {
-  background-color: rgb(10, 170, 200);
+  background-color: rgb(170, 180, 160);
   color: white;
   padding: 10px 15px;
   margin: 20px 5px 0px 5px;
@@ -297,30 +344,5 @@ input[type="number"] {
 }
 
 #new_note_popup button:hover {
-  background-color: rgb(10, 150, 180);
-}
-
-#new_note_popup {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 500px;
-  border-radius: 5px;
-  background-color: skyblue;
-  padding: 20px;
-}
-
-#popup_container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 6;
+  background-color: rgb(150, 160, 140);
 }
