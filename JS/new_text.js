@@ -11,12 +11,22 @@ newTextButton.addEventListener("click", (event) => {
     alert("내용을 입력하세요.");
   } else {
     event.preventDefault();
+
     let inputTime = document.createElement("div");
-    inputTime.innerHTML = new Date();
+    let nowDate = new Date();
+    let nowHour = nowDate.getHours();
+    let meridium = nowHour > 12 ? "오후" : "오전";
+    let nowMinute = String(nowDate.getMinutes()).padStart(2, "0");
+    let nowformat = `${meridium} ${
+      nowHour > 12 ? nowHour - 12 : nowHour
+    }:${nowMinute}`;
+    inputTime.innerHTML = nowformat;
     inputTime.setAttribute("class", "text_time");
+
     let inputContents = document.createElement("div");
     inputContents.innerHTML = inputValue;
     inputContents.setAttribute("class", "text_contents");
+
     newBox.prepend(boxMenu, inputTime, inputContents);
     textListContainer.appendChild(newBox);
   }

@@ -4,6 +4,6 @@ const parentContainer = document.querySelector("#text_list_container");
 
 for (let i = 0; i < textDelete.length; i++) {
   textDelete[i].addEventListener("click", () => {
-    parentContainer.removeChild(textBoxList[i]);
+    parentContainer.removeChild(textBox[i]);
   });
 }

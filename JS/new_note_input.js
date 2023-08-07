@@ -9,7 +9,7 @@ const form = document.querySelector("#new_note_popup");
 const today = new Date();
 const endDate = new Date(today);
 
-endDate.setDate(today.getDate() + 3);
+endDate.setDate(today.getDate() + 2);
 
 startDay.value = today.toISOString().substring(0, 10);
 endDay.value = endDate.toISOString().substring(0, 10);
@@ -26,8 +26,10 @@ function intervalDay() {
   if (intervalDay == 0) {
     periodNumber.innerHTML = "당일치기";
   } else {
-    periodNumber.innerHTML = intervalDay.toString() + "일동안";
+    periodNumber.innerHTML = (intervalDay + 1).toString() + "일동안";
   }
+  startDay.setAttribute("max", endDay.value);
+  endDay.setAttribute("min", startDay.value);
 }
 
 form.addEventListener("submit", (event) => {
