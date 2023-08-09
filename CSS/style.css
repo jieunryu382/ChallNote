@@ -135,11 +135,11 @@ body {
   overflow-x: hidden;
 }
 
-#text_list_container::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 15px;
 }
-#text_list_container::-webkit-scrollbar-thumb {
-  background-color: rgba(240, 248, 255, 0.6);
+::-webkit-scrollbar-thumb {
+  background-color: rgba(220, 230, 240);
   border-radius: 10px;
   background-clip: padding-box;
   border: 3px solid transparent;
@@ -300,8 +300,8 @@ body {
   }
 }
 
-/* 노트 생성 */
-#popup_container {
+/* 노트 생성 팝업 */
+.popup_container {
   position: absolute;
   top: 0;
   left: 0;
@@ -311,7 +311,7 @@ body {
   z-index: 6;
 }
 
-#new_note_popup {
+#new_note_popup_form {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -326,11 +326,11 @@ body {
   padding: 20px;
 }
 
-#new_note_popup label {
+#new_note_popup_form label {
   padding: 10px 0 5px 0;
 }
 
-#new_note_popup input[type="text"],
+#new_note_popup_form input[type="text"],
 textarea {
   width: 450px;
   padding: 10px;
@@ -340,7 +340,7 @@ textarea {
   margin: 10px 0px;
 }
 
-#new_note_popup input[type="date"],
+#new_note_popup_form input[type="date"],
 input[type="number"] {
   width: 130px;
   padding: 10px;
@@ -351,7 +351,7 @@ input[type="number"] {
   text-align: center;
 }
 
-#new_note_popup button {
+#new_note_popup_form button {
   background-color: rgb(170, 180, 160);
   color: white;
   padding: 10px 15px;
@@ -361,6 +361,43 @@ input[type="number"] {
   cursor: pointer;
 }
 
-#new_note_popup button:hover {
+#new_note_popup_form button:hover {
   background-color: rgb(150, 160, 140);
+}
+
+/* 글 수정 팝업 */
+#text_update_popup_form {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+#text_update_popup_form button {
+  background-color: grey;
+  color: white;
+  padding: 10px 15px;
+  margin: 0px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#text_update_contents {
+  min-width: 550px;
+  min-height: 200px;
+  margin: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow: auto;
+  overflow-x: hidden;
 }

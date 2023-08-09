@@ -103,7 +103,7 @@
             <i class="fa-solid fa-bars box_icon"></i>
             <div class="hidden text_menu_toggle">
               <div class="text_menu_list">
-                <i class="fa-solid fa-pen text_edit"></i>
+                <i class="fa-solid fa-pen text_update"></i>
                 <i class="fa-solid fa-trash text_delete"></i>
               </div>
             </div>
@@ -129,7 +129,7 @@
       </div>
 
       <form id="new_text_form">
-        <input id="text_input_box" required type="text" />
+        <input id="new_text_input" required type="text" />
         <button id="new_text_button"><i class="fa-solid fa-paper-plane"></i></button>
       </form>
     </section>
@@ -155,8 +155,8 @@
   </div>
 
   <!-- 노트 생성 팝업 -->
-  <div id="popup_container" class="hidden">
-    <form id="new_note_popup">
+  <div id="new_note_popup_container" class="popup_container hidden">
+    <form id="new_note_popup_form">
       <label for="input_title">제목</label>
       <input type="text" id="input_title" placeholder="노트 제목" />
 
@@ -172,12 +172,24 @@
       <div id="input_period">3일동안</div>
 
       <div>
-        <button type="submit" id="popup_submit">확인</button>
-        <button type='button' id="popup_cancle">취소</button>
+        <button type="submit" id="new_note_submit">확인</button>
+        <button type="button" id="new_note_cancle">취소</button>
       </div>
-
     </form>
   </div>
+
+  <!-- 텍스트 수정 팝업 -->
+  <div id="text_update_popup_container" class="popup_container hidden">
+    <form id="text_update_popup_form">
+      <div style="font-weight: 600;">글 수정</div>
+      <textarea id="text_update_contents"></textarea>
+      <div>
+        <button type="submit" id="text_update_submit">확인</button>
+        <button type="button" id="text_update_cancle">취소</button>
+      </div>
+    </form>
+  </div>
+
   <script src="JS/date.js"></script>
   <script src="js/list_toggle.js"></script>
   <script src="js/section_toggle.js"></script>

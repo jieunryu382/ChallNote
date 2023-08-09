@@ -1,7 +1,7 @@
 const newButton = document.querySelector("#new_note");
-const popupContainer = document.querySelector("#popup_container");
-const newForm = document.querySelector("#new_note_popup");
-const cancle = document.querySelector("#popup_cancle");
+const popupContainer = document.querySelector("#new_note_popup_container");
+const newForm = document.querySelector("#new_note_popup_form");
+const cancle = document.querySelector("#new_note_cancle");
 
 class useOutsideClick {
   ref = null;

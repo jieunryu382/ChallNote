@@ -3,8 +3,8 @@ const description = document.querySelector("#input_description");
 const periodNumber = document.querySelector("#input_period");
 const startDay = document.querySelector("#input_start");
 const endDay = document.querySelector("#input_end");
-const submit = document.querySelector("#popup_submit");
-const form = document.querySelector("#new_note_popup");
+const submit = document.querySelector("#new_note_submit");
+const form = document.querySelector("#new_note_popup_form");
 
 const today = new Date();
 const endDate = new Date(today);

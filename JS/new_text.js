@@ -1,6 +1,5 @@
 const textListContainer = document.querySelector("#text_list_container");
-const textInput = document.querySelector("#text_input_box");
-
+const textInput = document.querySelector("#new_text_input");
 const newTextButton = document.querySelector("#new_text_button");
 
 newTextButton.addEventListener("click", (event) => {
